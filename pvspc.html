@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Mario vs Luigi</title>
+    <link rel="icon" href="images/Mario_emblem.png">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <link rel="stylesheet" href="css/master.css">
+  </head>
+  <body class="pvspc">
+    <h1>Ten cuidado, Bowser es un profesional del PiPaTi</h1>
+    <form>
+      <h2 for="p1">Mario elige:</h2>
+      <label for="piedra">
+      <input id="piedra" type="radio" value="piedra" name="p1">
+      <img src="images/piedra.png" alt="piedra" height="75" width="75">
+      </label>
+      <label for="papel">
+        <input id="papel" type="radio" value="papel" name="p1">
+        <img src="images/papel.png" alt="papel" height="75" width="75">
+      </label>
+      <label for="tijera">
+        <input id="tijera" type="radio" value="tijera" name="p1">
+        <img src="images/tijera.png" alt="tijera" height="75" width="75">
+      </label>
+        <br>
+        <input type="button" value="¡Veamos quién ganó!" onclick="playervspc(this.form)"/>
+    </form>
+    <a class="button" href="index.html">Regresa al menú</a>
+    <audio src="audio/PCMenu.mp3" autoplay>
+      <p>If you are reading this, it is because your browser does not support the audio element.</p>
+      <embed src="audio/PCMenu.mp3" width="180" height="90" hidden="true" />
+    </audio>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+a.button{
+  background-color: red;
+  border: 10px solid rgb(204, 155, 051);
+  color: white;
+  display: inline-block;
+  font-weight: bold;
+}
+body {
+   font-family: 'Press Start 2P';
+}
+body.mainpage{
+  background-attachment: fixed;
+  background-image: url(file:///home/moalve/Front%20End/2018-03-05%20Juego%20SMB/images/mainpage.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body.pvp{
+  background-attachment: fixed;
+  background-image: url(file:///home/moalve/Front%20End/2018-03-05%20Juego%20SMB/images/pvp.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body.pvspc{
+  background-attachment: fixed;
+  background-image: url(file:///home/moalve/Front%20End/2018-03-05%20Juego%20SMB/images/pvspc.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: red;
+}
+div.p1{
+  display: inline-block;
+  align-items: left;
+}
+div.p2{
+  float: right;
+}
+div.play{
+  float: center;
+  padding-top: 50px;
+}
+label > input{
+  visibility: hidden;
+  position: absolute;
+}
+label > input + img{
+  /* box-sizing: border-box; */
+  cursor:pointer;
+  border:10px solid #4878D8;
+}
+label > input:checked + img{
+  border:10px solid red;
+}

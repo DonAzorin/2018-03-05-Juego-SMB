@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Mario vs Luigi</title>
+    <link rel="icon" href="images/Mario_emblem.png">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <link rel="stylesheet" href="css/master.css">
+  </head>
+  <body class="pvp">
+    <h1>Elijan sus personajes y prepárense :D!</h1>
+    <form>
+      <div class="p1">
+        <h2 for="p1">Mario elige:</h2>
+        <br>
+        <label for="piedra">
+          <input id="piedra" type="radio" value="piedra" name="p1">
+          <img src="images/piedra.png" alt="piedra" height="75" width="75">
+        </label>
+        <label for="papel">
+          <input id="papel" type="radio" value="papel" name="p1">
+          <img src="images/papel.png" alt="papel" height="75" width="75">
+        </label>
+        <label for="tijera">
+          <input id="tijera" type="radio" value="tijera" name="p1">
+          <img src="images/tijera.png" alt="tijera" height="75" width="75">
+        </label>
+        <br>
+      </div>
+      <div class="p2">
+        <h2 for="p2">Luigi elige:</h2>
+        <br>
+        <label for="Piedra">
+          <input id="Piedra" type="radio" value="piedra" name="p2">
+          <img src="images/piedra.png" alt="piedra" height="75" width="75">
+        </label>
+        <label for="Papel">
+          <input id="Papel" type="radio" value="papel" name="p2">
+          <img src="images/papel.png" alt="papel" height="75" width="75">
+        </label>
+        <label for="Tijera">
+          <input id="Tijera" type="radio" value="tijera" name="p2">
+          <img src="images/tijera.png" alt="tijera" height="75" width="75">
+        </label>
+        <br>
+      </div>
+      <div class="play">
+        <input type="button" value="¡Veamos quién ganó!" onclick="playervsplayer(this.form)"/>
+      </div>
+    </form>
+    <audio src="audio/PMenu.mp3" autoplay>
+      <p>If you are reading this, it is because your browser does not support the audio element.</p>
+      <embed src="audio/PMenu.mp3" width="180" height="90" hidden="true" />
+    </audio>
+    <a class="button" href="index.html">Regresa al menú</a>
+    </form>
+    <script src="script.js"></script>
+  </body>
+</html>
