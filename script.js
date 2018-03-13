@@ -53,3 +53,25 @@ function playervspc (form) {
     console.log('empate');
   }
 }
+
+function ocultap1() {
+  var muestra = document.getElementById('p1')
+  if (p1.style.visibility==='visible') {
+    muestra.style.visibility= 'hidden'
+  } else {
+    muestra.style.visibility= 'visible'
+  }
+}
+
+function ocultap2() {
+  var muestra = document.getElementById('p2')
+  if (p2.style.visibility==='visible') {
+    muestra.style.visibility= 'hidden'
+  } else {
+    muestra.style.visibility= 'visible'
+  }
+}
+
+function marcador() {
+  
+}

@@ -1,45 +1,60 @@
-a.button{
+a.button, input[type=button]{
   background-color: red;
   border: 10px solid rgb(204, 155, 051);
   color: white;
   display: inline-block;
+  font-family: inherit;
+  font-size: 15px;
   font-weight: bold;
+  text-decoration: none;
 }
 body {
    font-family: 'Press Start 2P';
 }
 body.mainpage{
   background-attachment: fixed;
-  background-image: url(file:///home/moalve/Front%20End/2018-03-05%20Juego%20SMB/images/mainpage.jpg);
+  background-image: url(../images/mainpage.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 body.pvp{
   background-attachment: fixed;
-  background-image: url(file:///home/moalve/Front%20End/2018-03-05%20Juego%20SMB/images/pvp.jpg);
+  background-image: url(../images/pvp.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 body.pvspc{
   background-attachment: fixed;
-  background-image: url(file:///home/moalve/Front%20End/2018-03-05%20Juego%20SMB/images/pvspc.png);
+  background-image: url(../images/pvspc.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  color: red;
+  color: yellow;
+}
+div.columna1{
+  display: inline-table;
+}
+div.columna2{
+  display: inline-table;
 }
 div.p1{
-  display: inline-block;
-  align-items: left;
+  text-align: justify;
 }
 div.p2{
-  float: right;
+  text-align: justify;
 }
 div.play{
-  float: center;
   padding-top: 50px;
+  margin: 0 auto;
+}
+h1{
+  text-align: center;
+}
+img{
+  height: 75px;
+  width: 75px;
 }
 label > input{
   visibility: hidden;

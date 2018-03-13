@@ -2,26 +2,27 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale= 1.0">
     <title>Mario vs Luigi</title>
     <link rel="icon" href="images/Mario_emblem.png">
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
     <link rel="stylesheet" href="css/master.css">
   </head>
   <body class="pvspc">
-    <h1>Ten cuidado, Bowser es un profesional del PiPaTi</h1>
+    <h1>¡Vence al campeón y salva a la princesa!</h1>
     <form>
       <h2 for="p1">Mario elige:</h2>
       <label for="piedra">
       <input id="piedra" type="radio" value="piedra" name="p1">
-      <img src="images/piedra.png" alt="piedra" height="75" width="75">
+      <img src="images/piedra.png" alt="piedra">
       </label>
       <label for="papel">
         <input id="papel" type="radio" value="papel" name="p1">
-        <img src="images/papel.png" alt="papel" height="75" width="75">
+        <img src="images/papel.png" alt="papel">
       </label>
       <label for="tijera">
         <input id="tijera" type="radio" value="tijera" name="p1">
-        <img src="images/tijera.png" alt="tijera" height="75" width="75">
+        <img src="images/tijera.png" alt="tijera">
       </label>
         <br>
         <input type="button" value="¡Veamos quién ganó!" onclick="playervspc(this.form)"/>
