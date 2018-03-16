@@ -1,13 +1,3 @@
-a.button, input[type=button]{
-  background-color: red;
-  border: 10px solid rgb(204, 155, 051);
-  color: white;
-  display: inline-block;
-  font-family: inherit;
-  font-size: 15px;
-  font-weight: bold;
-  text-decoration: none;
-}
 body {
    font-family: 'Press Start 2P';
 }
@@ -33,24 +23,35 @@ body.pvspc{
   background-size: cover;
   color: yellow;
 }
-div.columna1{
-  display: inline-table;
+header{
+  font-size: 30px;
+  text-align: center;
 }
-div.columna2{
-  display: inline-table;
+section#columna1{
+  display: inline-block;
 }
-div.p1{
+a.button, input[type=button]{
+  background-color: red;
+  border: 10px solid rgb(204, 155, 051);
+  color: white;
+  display: inline-block;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: bold;
+  text-decoration: none;
+}
+section#columna2{
+  display: inline-block;
+}
+article#p1{
   text-align: justify;
 }
-div.p2{
+article#p2{
   text-align: justify;
 }
-div.play{
+article#play{
   padding-top: 50px;
   margin: 0 auto;
-}
-h1{
-  text-align: center;
 }
 img{
   height: 75px;

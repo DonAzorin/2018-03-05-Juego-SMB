@@ -10,28 +10,60 @@
   </head>
   <body class="pvspc">
     <h1>¡Vence al campeón y salva a la princesa!</h1>
-    <form>
-      <h2 for="p1">Mario elige:</h2>
-      <label for="piedra">
-      <input id="piedra" type="radio" value="piedra" name="p1">
-      <img src="images/piedra.png" alt="piedra">
-      </label>
-      <label for="papel">
-        <input id="papel" type="radio" value="papel" name="p1">
-        <img src="images/papel.png" alt="papel">
-      </label>
-      <label for="tijera">
-        <input id="tijera" type="radio" value="tijera" name="p1">
-        <img src="images/tijera.png" alt="tijera">
-      </label>
+    <section id="columna1">
+      <form>
+        <h2 for="p1">Mario elige:</h2>
+        <label for="piedra">
+          <input id="piedra" type="radio" value="piedra" name="p1">
+          <img src="images/piedra.png" alt="piedra">
+        </label>
+        <label for="papel">
+          <input id="papel" type="radio" value="papel" name="p1">
+          <img src="images/papel.png" alt="papel">
+        </label>
+        <label for="tijera">
+          <input id="tijera" type="radio" value="tijera" name="p1">
+          <img src="images/tijera.png" alt="tijera">
+        </label>
+        <br>
         <br>
         <input type="button" value="¡Veamos quién ganó!" onclick="playervspc(this.form)"/>
-    </form>
+      </form>
+      <h2 for="pc">Bowser eligió:</h2>
+      <article id="pc">
+        <br>
+        <label for="Piedra">
+          <input id="Piedra" type="radio" value="piedra" name="Bowser">
+          <img src="images/piedra.png" alt="piedra">
+        </label>
+        <label for="Papel">
+          <input id="Papel" type="radio" value="papel" name="Bowser">
+          <img src="images/papel.png" alt="papel">
+        </label>
+        <label for="Tijera">
+          <input id="Tijera" type="radio" value="tijera" name="Bowser">
+          <img src="images/tijera.png" alt="tijera">
+        </label>
+        <br>
+      </div>
+    </section>
+    <section id="columna2">
+      <article class="scoreMario">
+        <p>Mario lleva:</p>
+        <p id="juegosMario">0</p><p>juegos</p>
+        <p class="rondasMario">0</p><p>rondas de 3 juegos</p>
+      </article>
+      <article class="scoreBowser">
+        <p>Bowser lleva:</p>
+        <p id="juegosBowser">0</p><p>juegos</p>
+        <p class="rondasBowser">0</p><p>rondas de 3 juegos</p>
+      </article>
+    </section>
     <a class="button" href="index.html">Regresa al menú</a>
     <audio src="audio/PCMenu.mp3" autoplay>
       <p>If you are reading this, it is because your browser does not support the audio element.</p>
       <embed src="audio/PCMenu.mp3" width="180" height="90" hidden="true" />
-    </audio>
+      </audio>
     <script src="script.js"></script>
   </body>
 </html>

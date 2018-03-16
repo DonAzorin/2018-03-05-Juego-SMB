@@ -1,19 +1,22 @@
+var p1 = 0
+var p2 = 0
+var pc = 0
 function playervsplayer(form) {
   var vp = [form.p1.value, form.p2.value]
   console.log(vp);
 
   if (vp[0] == 'piedra' && vp[1] == 'papel') {
-    console.log('gana p2');
+    ganaP2();
   } else if (vp[0] == 'piedra' && vp[1] =='tijera') {
-    console.log('gana p1');
+    ganaP1();
   } else if (vp[0]== 'papel' && vp[1] == 'piedra') {
-    console.log('gana p1');
+    ganaP1();
   } else if (vp[0] == 'papel' && vp[1] == 'tijera') {
-    console.log('gana p2');
+    ganaP2();
   } else if (vp[0] == 'tijera' && vp[1] == 'piedra') {
-    console.log('gana p2');
+    ganaP2();
   } else if (vp[0] == 'tijera' && vp[1] == 'papel') {
-    console.log('gana p1');
+    ganaP1();
   } else {
     console.log('empate');
   }
@@ -25,30 +28,30 @@ function playervspc (form) {
 
   if (pc == 0) {
     pc = 'piedra';
-    console.log(pc);
+    // eligeBowPi();
   } else if (pc == 1) {
     pc = 'papel';
-    console.log(pc);
+    // eligeBowPa();
   } else if (pc == 2 | 3) {
     pc = 'tijera';
-    console.log(pc);
+    // eligeBowTi();
   }
 
   var vspc = [pc, p1]
   console.log(vspc);
 
   if (vspc[0] == 'piedra' && vspc[1] == 'papel') {
-    console.log('gana p1');
+    ganaP1();
   } else if (vspc[0] == 'piedra' && vspc[1] =='tijera') {
-    console.log('gana pc');
+    ganaPC();
   } else if (vspc[0]== 'papel' && vspc[1] == 'piedra') {
-    console.log('gana pc');
+    ganaPC();
   } else if (vspc[0] == 'papel' && vspc[1] == 'tijera') {
-    console.log('gana p1');
+    ganaP1();
   } else if (vspc[0] == 'tijera' && vspc[1] == 'piedra') {
-    console.log('gana p1');
+    ganaP1();
   } else if (vspc[0] == 'tijera' && vspc[1] == 'papel') {
-    console.log('gana pc');
+    ganaPC();
   } else {
     console.log('empate');
   }
@@ -72,6 +75,29 @@ function ocultap2() {
   }
 }
 
-function marcador() {
-  
+function ganaP1(){
+  p1 = p1 + 1
+  document.getElementById('juegosMario').innerHTML = p1
 }
+
+function ganaP2(){
+  p2 = p2 + 1;
+  document.getElementById('juegosLuigi').innerHTML = p2
+}
+
+function ganaPC(){
+  pc = pc + 1;
+  document.getElementById('juegosBowser').innerHTML = pc
+}
+
+// function eligeBowPi(){
+//   document.getElementsByName("Bowser").value = "piedra"
+// }
+//
+// function eligeBowPa(){
+//   document.getElementsByName("Bowser").value = "papel"
+// }
+//
+// function eligeBowTi(){
+//   document.getElementsByName("Bowser").value = "tijera"
+// }
