@@ -1,62 +1,36 @@
 var p1 = 0
 var p2 = 0
 var pc = 0
-function playervsplayer(form) {
-  var vp = [form.p1.value, form.p2.value]
-  console.log(vp);
 
-  if (vp[0] == 'piedra' && vp[1] == 'papel') {
-    ganaP2();
-  } else if (vp[0] == 'piedra' && vp[1] =='tijera') {
-    ganaP1();
-  } else if (vp[0]== 'papel' && vp[1] == 'piedra') {
-    ganaP1();
-  } else if (vp[0] == 'papel' && vp[1] == 'tijera') {
-    ganaP2();
-  } else if (vp[0] == 'tijera' && vp[1] == 'piedra') {
-    ganaP2();
-  } else if (vp[0] == 'tijera' && vp[1] == 'papel') {
-    ganaP1();
-  } else {
-    console.log('empate');
-  }
+function playerVsPlayer (form) {
+  let n1 = form.p1.value;
+  let n2 = form.p2.value;
+
+  ganador(n1, n2);
 }
 
-function playervspc (form) {
-  var pc = Math.round(Math.random()*3)
-  var p1 = form.p1.value
-
-  if (pc == 0) {
-    pc = 'piedra';
-    // eligeBowPi();
-  } else if (pc == 1) {
-    pc = 'papel';
-    // eligeBowPa();
-  } else if (pc == 2 | 3) {
-    pc = 'tijera';
-    // eligeBowTi();
-  }
-
-  var vspc = [pc, p1]
-  console.log(vspc);
-
-  if (vspc[0] == 'piedra' && vspc[1] == 'papel') {
-    ganaP1();
-  } else if (vspc[0] == 'piedra' && vspc[1] =='tijera') {
-    ganaPC();
-  } else if (vspc[0]== 'papel' && vspc[1] == 'piedra') {
-    ganaPC();
-  } else if (vspc[0] == 'papel' && vspc[1] == 'tijera') {
-    ganaP1();
-  } else if (vspc[0] == 'tijera' && vspc[1] == 'piedra') {
-    ganaP1();
-  } else if (vspc[0] == 'tijera' && vspc[1] == 'papel') {
-    ganaPC();
-  } else {
-    console.log('empate');
-  }
+function playerVsPc (form) {
+  let n1 = form.p1.value;
+  let n2 = Math.floor(Math.random()*3)+1;
+  //Colocar el margen al elemento a partir de n2... colocarles una clase con data-tab quizá
+  ganador(n1, n2);
 }
 
+function ganador (n1, n2) {
+  
+  result = parseFloat(n1, 10) - parseFloat(n2, 10)
+  result = parseFloat(result, 10).toString(10)
+
+  if (result == "1" || result == "-2") {
+    ganaP1();
+    
+  } else if (result == "-1" || result == "2") {
+    ganaP2();
+  } else {
+    console.log('empate')
+  }
+}
+// FACTORIZA ESTAS FUNCIONES
 function ocultap1() {
   var muestra = document.getElementById('p1')
   if (p1.style.visibility==='visible') {
@@ -75,11 +49,13 @@ function ocultap2() {
   }
 }
 
+//ELIMINA 'juegosPERSONAJE' Y REEMPLAZA POR 'juegosP1' 'juegosP2'
 function ganaP1(){
   p1 = p1 + 1
   document.getElementById('juegosMario').innerHTML = p1
 }
 
+//INTEGRA LAS DOS FUNCIONES EN UNA
 function ganaP2(){
   p2 = p2 + 1;
   document.getElementById('juegosLuigi').innerHTML = p2
@@ -89,15 +65,3 @@ function ganaPC(){
   pc = pc + 1;
   document.getElementById('juegosBowser').innerHTML = pc
 }
-
-// function eligeBowPi(){
-//   document.getElementsByName("Bowser").value = "piedra"
-// }
-//
-// function eligeBowPa(){
-//   document.getElementsByName("Bowser").value = "papel"
-// }
-//
-// function eligeBowTi(){
-//   document.getElementsByName("Bowser").value = "tijera"
-// }
