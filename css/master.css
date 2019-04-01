@@ -45,9 +45,11 @@ section#columna2{
 }
 article#p1{
   text-align: justify;
+  display: grid;
 }
 article#p2{
   text-align: justify;
+  display: grid;
 }
 article#play{
   padding-top: 50px;

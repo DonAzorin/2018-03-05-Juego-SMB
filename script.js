@@ -1,7 +1,3 @@
-var p1 = 0
-var p2 = 0
-var pc = 0
-
 function playerVsPlayer (form) {
   let n1 = form.p1.value;
   let n2 = form.p2.value;
@@ -22,46 +18,45 @@ function ganador (n1, n2) {
   result = parseFloat(result, 10).toString(10)
 
   if (result == "1" || result == "-2") {
-    ganaP1();
-    
+    let player = 'juegosP1'
+    score(player)
   } else if (result == "-1" || result == "2") {
-    ganaP2();
+    let player = 'juegosP2'
+    score(player)
   } else {
+    // let draw = document.getElementById('Empate').innerHTML
+    // score(draw);
     console.log('empate')
   }
 }
 // FACTORIZA ESTAS FUNCIONES
+//CONSIDERA SOLUCION DE RED SOCIAL GENÉRICA
 function ocultap1() {
   var muestra = document.getElementById('p1')
-  if (p1.style.visibility==='visible') {
-    muestra.style.visibility= 'hidden'
+  if (p1.style.display==='grid') {
+    muestra.style.display= 'none'
   } else {
-    muestra.style.visibility= 'visible'
+    muestra.style.display= 'grid'
   }
 }
 
 function ocultap2() {
   var muestra = document.getElementById('p2')
-  if (p2.style.visibility==='visible') {
-    muestra.style.visibility= 'hidden'
+  if (p2.style.display==='grid') {
+    muestra.style.display= 'none'
   } else {
-    muestra.style.visibility= 'visible'
+    muestra.style.display= 'grid'
   }
 }
 
-//ELIMINA 'juegosPERSONAJE' Y REEMPLAZA POR 'juegosP1' 'juegosP2'
-function ganaP1(){
-  p1 = p1 + 1
-  document.getElementById('juegosMario').innerHTML = p1
-}
+function score(player) {
+  let point = 1
+  let winner = document.getElementById(`${player}`).innerHTML
+  winner = Number(winner)
+  winner = winner + point
+  document.getElementById(`${player}`).innerHTML = winner
 
-//INTEGRA LAS DOS FUNCIONES EN UNA
-function ganaP2(){
-  p2 = p2 + 1;
-  document.getElementById('juegosLuigi').innerHTML = p2
-}
+  // let draw = draw + 1
+  //   console.log('empate');
+  }
 
-function ganaPC(){
-  pc = pc + 1;
-  document.getElementById('juegosBowser').innerHTML = pc
-}
